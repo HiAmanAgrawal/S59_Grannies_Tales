@@ -1,10 +1,16 @@
 const express = require('express');
+const {connectToDB, checkConnection} = require('./db')
 const app = express();
 const port = 8080;
 
-
-app.get("/ping",(req,res)=>{
-  res.send("pong")
+connectToDB()                              
+app.get("/",(req,res)=>{
+  if(checkConnection()){
+    res.send("Connectd to MongoDB")
+  }
+  else{
+    res.send("Not Connected")
+  }
 })
 if (require.main === module) {
   app.listen(port, () => {
