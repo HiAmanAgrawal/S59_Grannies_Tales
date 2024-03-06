@@ -1,0 +1,21 @@
+meta {
+  name: Put_Api_Testing
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/api/65e81d7025b79341b8772b61
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "storyID": 11,
+    "storyName": "Mahabharat The Epic",
+    "category": "Mythology",
+    "Author": "Vyasa",
+    "Language": "Hindi"
+  }
+}
