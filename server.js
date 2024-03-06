@@ -1,21 +1,17 @@
 const express = require('express');
+const mongoose=require('mongoose')
 const {connectToDB, checkConnection} = require('./db')
+const routes=require('./routes.js')
 const app = express();
 const port = 8080;
 
-connectToDB()                              
-app.get("/",(req,res)=>{
-  if(checkConnection()){
-    res.send("Connectd to MongoDB")
-  }
-  else{
-    res.send("Not Connected")
-  }
-})
-if (require.main === module) {
-  app.listen(port, () => {
-    console.log(`🚀 server running on PORT: ${port}`);
-  });
-}
 
-module.exports = app;
+app.use(express.json())
+app.use('/api',routes)
+
+connectToDB()
+app.listen(port,()=>{
+  console.log("Running on PORT",port);
+});
+
+

@@ -1,0 +1,21 @@
+meta {
+  name: Post_Api_Testing
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8080/api/add-items
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "storyID": 11,
+    "storyName": "Mahabharat",
+    "category": "Mythology",
+    "Author": "Vyasa",
+    "Language": "Hindi"
+  }
+}

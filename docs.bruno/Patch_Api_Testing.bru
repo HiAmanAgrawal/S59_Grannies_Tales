@@ -1,0 +1,21 @@
+meta {
+  name: Patch_Api_Testing
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:8080/api/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "storyID": 11,
+    "storyName": "Mahabharata",
+    "category": "Mythology",
+    "Author": "Vyasa",
+    "Language": "Hindi"
+  }
+}

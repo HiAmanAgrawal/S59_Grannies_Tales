@@ -1,0 +1,22 @@
+meta {
+  name: GET_API_TESTING
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8080/api/65e6b805cb93989d0c4a1e88
+  body: none
+  auth: none
+}
+
+body:json {
+  
+  {
+      "storyID": 10,
+      "storyName": "Ramayana",
+      "category": "Mythology",
+      "Author": "Valmiki",
+      "Language": "Hindi"
+  }
+}
