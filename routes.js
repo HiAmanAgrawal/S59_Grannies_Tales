@@ -12,7 +12,7 @@ router.get('/',async(req,res)=>{
     }
     catch(err)
     {
-        res.json({error: "Error Occurred"})
+        res.json({error: "Error Occurred in finding the Story"})
     }
 });
 
@@ -24,7 +24,7 @@ router.get('/:id',async(req,res)=>{
         res.json(foundStory)
     }
     catch(err){
-        res.json({error:"Error Occurred"})
+        res.json({error:"Error Occurred in finding the story with the particular ID "})
     }
 });
 
@@ -45,7 +45,7 @@ router.post('/add-items',async(req,res)=>{
     }
 
     catch(err){
-        res.json({error:"Error Occurred"})
+        res.json({error:"Error Occurred In Adding"})
     }
 });
 
@@ -71,7 +71,7 @@ router.put('/:id', async(req,res)=>{
         const foundStory=await story.findByIdAndUpdate(req.params.id,req.body,{new:true});
         if(!foundStory)
         {
-            return res.status(404).json({error:"Product Not Found"})
+            return res.status(404).json({error:"Story Not Found"})
         }
         res.json(foundStory);
     }
