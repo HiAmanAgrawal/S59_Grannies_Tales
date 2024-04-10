@@ -20,6 +20,10 @@ Author:{
 Language:{
     type:String,
     required: false
+},
+Image:{
+    type:String,
+    required:true
 }
 })
 

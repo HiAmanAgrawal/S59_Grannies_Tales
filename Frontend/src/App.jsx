@@ -1,6 +1,9 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
 import Banner from './Components/Banner'
+import Footer from './Components/Footer'
+import FreeStory from './Components/FreeStory'
+import Cards from './Components/Cards'
 
 
 function App() {
@@ -8,6 +11,9 @@ function App() {
     <>
     <Navbar/>
     <Banner/>
+    <FreeStory/>
+    {/* <Cards/> */}
+    <Footer/>
     </>
   )
 }

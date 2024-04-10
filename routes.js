@@ -37,7 +37,6 @@ router.post('/add-items',async(req,res)=>{
         category:req.body.category,
         Author:req.body.Author,
         Language:req.body.Language,
-
     })
     try{
         const savedStory=await newStory.save()
