@@ -11,7 +11,7 @@ function FreeStory() {
 
   const getStory = async () => {
     try {
-      const data = await axios.get("https://s59-grannies-tales.onrender.com/api");
+      const data = await axios.get("https://s59-grannies-tales.onrender.com/api/");
       console.log(data.data);
       setStory(data.data);
     } catch (error) {
