@@ -34,6 +34,7 @@ router.post('/add-items',async(req,res)=>{
     const newStory=new story({
         storyID:req.body.storyID,
         storyName:req.body.storyName,
+        Image:req.body.Image,
         category:req.body.category,
         Author:req.body.Author,
         Language:req.body.Language,

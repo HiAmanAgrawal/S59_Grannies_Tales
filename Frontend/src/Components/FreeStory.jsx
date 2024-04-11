@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -11,9 +10,9 @@ function FreeStory() {
 
   const getStory = async () => {
     try {
-      const data = await axios.get("https://s59-grannies-tales.onrender.com/api/");
-      console.log(data.data);
-      setStory(data.data);
+      const response = await axios.get("http://localhost:8080/api/");
+      console.log(response.data);
+      setStory(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -57,6 +56,7 @@ function FreeStory() {
       },
     ],
   };
+
   return (
     <>
       <div className=" max-w-screen-2xl container mx-auto md:px-20 px-4">
@@ -76,4 +76,5 @@ function FreeStory() {
     </>
   );
 }
+
 export default FreeStory;

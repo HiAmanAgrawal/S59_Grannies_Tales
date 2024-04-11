@@ -2,8 +2,7 @@ const mongoose=require('mongoose');
 
 const StorySchema = new mongoose.Schema({
 storyID:{
-    type: Number,
-    required:true
+    type: Number
 },
 storyName:{
    type : String ,
