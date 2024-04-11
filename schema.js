@@ -23,7 +23,8 @@ Language:{
 },
 Image:{
     type:String,
-    required:true
+    required:true,
+    match: /^https?:\/\/(?:www\.)?[\w\-.]+\.[a-z]{2,}(?:\/[\w\-.\/?=&%+]*)?$/i
 }
 })
 

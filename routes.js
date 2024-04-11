@@ -44,7 +44,7 @@ router.post('/add-items',async(req,res)=>{
     }
 
     catch(err){
-        res.json({error:"Error Occurred In Adding"})
+        res.status(500).json({error:"Error Occurred While Updating The Story"})
     }
 });
 
