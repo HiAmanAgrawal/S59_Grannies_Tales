@@ -20,6 +20,11 @@ Author:{
 Language:{
     type:String,
     required: false
+},
+Image:{
+    type:String,
+    required:true,
+    match: /^https?:\/\/(?:www\.)?[\w\-.]+\.[a-z]{2,}(?:\/[\w\-.\/?=&%+]*)?$/i
 }
 })
 
