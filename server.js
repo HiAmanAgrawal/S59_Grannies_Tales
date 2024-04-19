@@ -9,7 +9,7 @@ const port = 8080;
 
 
 app.use(express.json())
-app.use(cors({origin:"https://s59-grannies-tales.onrender.com",credentials:true}))
+app.use(cors())
 app.use('/api',routes)
 
 connectToDB()

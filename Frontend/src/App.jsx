@@ -1,19 +1,19 @@
 import React from 'react'
-import Navbar from './Components/Navbar'
-import Banner from './Components/Banner'
-import Footer from './Components/Footer'
-import FreeStory from './Components/FreeStory'
-import Cards from './Components/Cards'
+import Home from './Home/Home'
+import {Route,Routes} from 'react-router-dom'
+import Genres from './genre/Genres'
+import Signup from './Components/Signup'
 
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <Banner/>
-    <FreeStory/>
-    {/* <Cards/> */}
-    <Footer/>
+     <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/genre" element={<Genres/>} />
+          <Route path="/signup" element={<Signup/>} />
+
+     </Routes>
     </>
   )
 }
