@@ -7,16 +7,36 @@ import Cards from "./Cards";
 
 function FreeStory() {
   const [story, setStory] = useState([]);
+  const [newStoryData,setNewStoryData]=useState(null);
 
   const getStory = async () => {
     try {
       const response = await axios.get("http://localhost:8080/api/");
       console.log(response.data);
       setStory(response.data);
+      addNewStory();
     } catch (error) {
       console.log(error);
     }
+
+
+    const addNewStory=async()=>{
+      if(newStoryData){
+        try{
+          const response=await axios.post("http://localhost:8080/api/add-items",newStoryData);
+          console.log(response.data)
+          setStory([...story,response.data]);
+          setNewStoryData(null);
+        }
+        catch(error){
+          console.log('Error adding new Story', error)
+        }
+      }
+    }
+
   };
+
+
 
   useEffect(() => {
     getStory();
