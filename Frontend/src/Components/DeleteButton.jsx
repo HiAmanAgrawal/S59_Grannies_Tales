@@ -8,7 +8,7 @@ function DeleteButton({ entityId }) {
     try {
       const response = await axios.delete(`http://localhost:8080/api/${entityId}`);
       console.log(response.data);
-      // Optionally, perform any additional actions after successful delete
+
     } catch (error) {
       console.error("Error:", error);
     }

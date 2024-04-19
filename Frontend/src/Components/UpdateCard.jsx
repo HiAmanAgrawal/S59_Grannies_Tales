@@ -9,7 +9,6 @@ function UpdateButton({ entityId }) {
   const [language, setLanguage] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
-  // Fetch the entity data when the component mounts
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -39,13 +38,16 @@ function UpdateButton({ entityId }) {
         storyName: storyName,
       });
       console.log(response.data);
-      // Optionally, reset form fields after successful update
+
+      //  reset  fields after  update
       setStoryName("");
       setImage("");
       setCategory("");
       setAuthor("");
       setLanguage("");
-      // Close the popup after successful update
+      
+
+      
       setShowPopup(false);
     } catch (error) {
       console.error("Error:", error);
