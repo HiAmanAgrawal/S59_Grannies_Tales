@@ -6,7 +6,19 @@ const story = require('./schema.js');
 const User = require('./userSchema');
 const jwt = require('jsonwebtoken')
 const SECRET = process.env.SECRET
-require('dotenv').config()
+
+const result = require('dotenv').config();
+
+if (result.error) {
+    console.error("Error loading environment variables:", result.error);
+    throw result.error; 
+}
+
+
+if (!process.env.SECRET) {
+    console.error("SECRET environment variable is not defined");
+    throw new Error("SECRET environment variable is not defined");
+}
 
 // Joi schema for story validation
 const storySchema = Joi.object({
