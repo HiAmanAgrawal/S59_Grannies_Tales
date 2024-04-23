@@ -2,7 +2,8 @@ const mongoose=require('mongoose');
 
 const StorySchema = new mongoose.Schema({
 storyID:{
-    type: Number
+    type: Number,
+    required:true
 },
 storyName:{
    type : String ,
@@ -24,8 +25,12 @@ Image:{
     type:String,
     required:true,
     match: /^https?:\/\/(?:www\.)?[\w\-.]+\.[a-z]{2,}(?:\/[\w\-.\/?=&%+]*)?$/i
-}
-})
+},
+// created_by: {
+//     type: String,
+//     // required: true
+//   }
+})                                                                                                                                                                                                                                                                                                                                                                              
 
 const story = mongoose.model('story',StorySchema)
 module.exports=story
