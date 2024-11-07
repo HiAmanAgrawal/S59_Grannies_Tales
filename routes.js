@@ -5,6 +5,7 @@ const Joi = require('joi');
 const story = require('./schema.js');
 const User = require('./userSchema');
 const jwt = require('jsonwebtoken')
+require('dotenv').config();
 const SECRET = process.env.SECRET
 
 const result = require('dotenv').config();
