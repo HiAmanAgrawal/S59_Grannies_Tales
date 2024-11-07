@@ -9,7 +9,7 @@ function EntityList() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/users');
+        const response = await axios.get('https://s59-grannies-tales-9nzx.onrender.com/users');
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching users:', error);
@@ -20,7 +20,7 @@ function EntityList() {
 
   const handleUserChange = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:8080/entities/${userId}`);
+      const response = await axios.get(`https://s59-grannies-tales-9nzx.onrender.com/entities/${userId}`);
       setEntities(response.data);
     } catch (error) {
       console.error('Error fetching entities:', error);

@@ -16,7 +16,7 @@ function Signup() {
     };
 
     try {
-      const response = await fetch("http://localhost:8080/api/signup/newuser", {
+      const response = await fetch("https://s59-grannies-tales-9nzx.onrender.com/api/signup/newuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

@@ -12,7 +12,7 @@ function UpdateButton({ entityId }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/${entityId}`);
+        const response = await axios.get(`https://s59-grannies-tales-9nzx.onrender.com/api/${entityId}`);
         const { data } = response;
         setStoryName(data.storyName);
         setImage(data.Image);
@@ -30,7 +30,7 @@ function UpdateButton({ entityId }) {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.patch(`http://localhost:8080/api/${entityId}`, {
+      const response = await axios.patch(`https://s59-grannies-tales-9nzx.onrender.com/api/${entityId}`, {
         Author: author,
         Image: image,
         Language: language,
