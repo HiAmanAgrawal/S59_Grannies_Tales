@@ -6,7 +6,7 @@ function DeleteButton({ entityId }) {
 
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`http://localhost:8080/api/${entityId}`);
+      const response = await axios.delete(`https://s59-grannies-tales-9nzx.onrender.com/api/${entityId}`);
       console.log(response.data);
 
     } catch (error) {

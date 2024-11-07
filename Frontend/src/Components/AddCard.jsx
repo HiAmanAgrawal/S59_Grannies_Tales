@@ -21,7 +21,7 @@ function AddCard() {
       // console.log(created_by)
       // setCreatedBy(document.cookie.split('; ').find(row => row.startsWith('username=')).split('=')[1])
 
-      const response = await axios.post("http://localhost:8080/api/add-items/newItem", {
+      const response = await axios.post("https://s59-grannies-tales-9nzx.onrender.com/api/add-items/newItem", {
         Author: Author,
         Image: image,
         Language: Language,

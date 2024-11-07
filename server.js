@@ -5,7 +5,7 @@ const routes=require('./routes.js')
 const cors = require('cors')
 const app = express();
 const port = 8080;
-
+require('dotenv').config();
 
 
 app.use(express.json())

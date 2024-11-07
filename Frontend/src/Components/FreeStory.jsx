@@ -11,7 +11,7 @@ function FreeStory() {
 
   const getStory = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/");
+      const response = await axios.get("https://s59-grannies-tales-9nzx.onrender.com/api/");
       console.log(response.data);
       setStory(response.data);
       addNewStory();
@@ -23,7 +23,7 @@ function FreeStory() {
     const addNewStory=async()=>{
       if(newStoryData){
         try{
-          const response=await axios.post("http://localhost:8080/api/add-items",newStoryData);
+          const response=await axios.post("https://s59-grannies-tales-9nzx.onrender.com/api/add-items",newStoryData);
           console.log(response.data)
           setStory([...story,response.data]);
           setNewStoryData(null);
